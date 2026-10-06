@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "שיר קנבסקי",
   description: "כתיבה, הרצאות, יצירה ובינה מלאכותית",
-  email: "hello@example.com",
+  email: "shir.kanevsky@gmail.com",
 };
 
 export const navigation = [

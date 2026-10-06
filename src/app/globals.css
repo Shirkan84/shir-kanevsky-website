@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-paper: #f5f0e7;
-  --color-sand: #ebe2d3;
-  --color-ink: #1f211d;
-  --color-rust: #9a4935;
-  --font-sans: Arial, "Noto Sans Hebrew", sans-serif;
-  --font-serif: Georgia, "Noto Serif Hebrew", serif;
+  --color-paper: #faf6ed;
+  --color-paper-deep: #f2eadc;
+  --color-sand: #e9dfcf;
+  --color-ink: #3d342f;
+  --color-plum: #4e3048;
+  --color-lavender: #8c7488;
+  --color-gold: #b18e4f;
+  --color-orange: #c45f32;
+  --color-rust: #c45f32;
+  --font-sans: var(--font-heebo), Arial, sans-serif;
+  --font-serif: var(--font-frank-ruhl), Georgia, serif;
 }
 
 * {
@@ -21,6 +26,7 @@ body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -30,5 +36,29 @@ h3 {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-rust) 22%, transparent);
+  background: color-mix(in srgb, var(--color-gold) 32%, transparent);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

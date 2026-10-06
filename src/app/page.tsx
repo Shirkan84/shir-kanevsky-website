@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site";
 const lectures = [
   "מהרעיון לספר: ליצור לפני שמרגישים מוכנים",
   "כש-AI פוגש יצירתיות",
-  "2% – אהבה בעידן של בינה מלאכותית",
+  "2%: אהבה בעידן של בינה מלאכותית",
 ];
 
 export default function Home() {
@@ -24,8 +24,8 @@ export default function Home() {
               יוצרת * כותבת * מרצה
             </p>
             <h1 className="font-serif text-[clamp(1.7rem,6vw,4rem)] leading-[1.02] font-semibold tracking-[-0.04em] text-plum">
-              <span className="block lg:whitespace-nowrap">אל תחכו לרגע שבו תרגישו מוכנים.</span>
-              <span className="mt-3 block text-ink lg:whitespace-nowrap">צרו אותו תוך כדי תנועה</span>
+              <span className="block lg:whitespace-nowrap">אל תחכו לרגע שבו תרגישו מוכנים.{" "}</span>
+              <span className="mt-3 block text-ink lg:whitespace-nowrap">צרו אותו תוך כדי תנועה.</span>
             </h1>
             <p className="mt-9 max-w-lg text-lg leading-8 text-ink/68">
               ספרות, יצירה וטכנולוגיה נפגשות במקום שבו רעיון קטן מתחיל לקבל צורה.
@@ -121,8 +121,9 @@ export default function Home() {
             </div>
             <div className="border-r border-orange/70 pr-6 sm:pr-10">
               {lectures.map((lecture, index) => (
-                <p key={lecture} className="border-b border-cream/12 py-7 font-serif text-2xl leading-snug text-cream/85 first:pt-0">
-                  <span className="ml-4 align-top text-xs text-orange">0{index + 1}</span>{lecture}
+                <p key={lecture} className="flex items-start gap-5 border-b border-cream/12 py-7 font-serif text-2xl leading-snug text-cream/85 first:pt-0">
+                  <span className="mt-1 min-w-6 shrink-0 font-sans text-xs text-orange">0{index + 1}</span>
+                  <span>{lecture}</span>
                 </p>
               ))}
             </div>
@@ -138,15 +139,15 @@ export default function Home() {
             <blockquote className="mt-9 max-w-2xl border-r-2 border-gold pr-6 font-serif text-2xl leading-relaxed text-dusk sm:text-3xl">
               ״כתיבה טובה לא מתחילה כשכבר יודעים בדיוק מה רוצים לומר. לפעמים מגלים את זה רק בזמן שכותבים.״
             </blockquote>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-ink/68">ליווי למי שרוצים מישהי שתחשוב איתם על הסיפור — לא במקומם.</p>
+            <p className="mt-7 max-w-xl text-lg leading-8 text-ink/68">ליווי למי שרוצים מישהי שתחשוב איתם על הסיפור, לא במקומם.</p>
             <Link href="/writing-guidance" className="group mt-9 inline-flex items-center gap-4 text-sm text-plum">
               <span className="h-px w-10 bg-orange transition-all duration-300 group-hover:w-16" aria-hidden="true" />
               איך אפשר לעבוד יחד
             </Link>
           </Reveal>
-          <Reveal delay={100} className="group relative h-[30rem] sm:h-[38rem] lg:h-[42rem]">
+          <Reveal delay={100} className="group relative mx-auto aspect-[2/3] w-full max-w-lg">
             <div className="absolute inset-0 overflow-hidden bg-plum">
-              <Image src={backCover} alt="שולחן כתיבה בלילה מתוך העולם החזותי של 2%" fill sizes="(max-width: 1024px) 100vw, 40vw" className="image-zoom object-cover object-center opacity-90" />
+              <Image src={backCover} alt="שולחן כתיבה בלילה מתוך העולם החזותי של 2%" fill sizes="(max-width: 1024px) 100vw, 40vw" className="image-zoom object-contain object-top opacity-90" />
               <div className="absolute inset-0 bg-plum/18" aria-hidden="true" />
             </div>
             <span className="absolute -bottom-4 -right-4 h-28 w-28 border-b border-r border-orange" aria-hidden="true" />

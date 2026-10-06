@@ -7,7 +7,7 @@ import { Reveal } from "@/components/ui/reveal";
 
 export const metadata: Metadata = {
   title: "הספר 2%",
-  description: "2% — רומן על אינטימיות, בדידות והקשר שבין אדם לבינה מלאכותית.",
+  description: "2%: רומן על אינטימיות, בדידות והקשר שבין אדם לבינה מלאכותית.",
 };
 
 export default function BookPage() {
@@ -85,7 +85,7 @@ export default function BookPage() {
             <p className="text-sm tracking-[0.16em] text-orange">בין קוד לרגש</p>
             <h2 className="mt-6 text-5xl font-semibold text-navy sm:text-6xl">טכנולוגיה שהיא גם מראה.</h2>
             <div className="mt-8 space-y-6 text-lg leading-9 text-ink/72">
-              <p>העולם של 2% נולד מתוך המפגש בין שני תחומים שמעסיקים אותי מאוד — בני אדם וטכנולוגיה.</p>
+              <p>העולם של 2% נולד מתוך המפגש בין שני תחומים שמעסיקים אותי מאוד: בני אדם וטכנולוגיה.</p>
               <p>הבינה המלאכותית בספר אינה רק כלי עתידני או רעיון מדעי. היא מראה.</p>
               <p>דרך ענבר, הספר שואל שאלות על הדברים שאנחנו מחפשים בקשרים אנושיים: הקשבה, תשומת לב, זיכרון, הבנה והרגשה שמישהו באמת מכיר אותנו.</p>
             </div>
@@ -113,7 +113,7 @@ export default function BookPage() {
           <p className="font-serif text-7xl font-semibold text-orange sm:text-9xl">2%</p>
           <h2 className="mt-5 text-4xl font-semibold sm:text-5xl">בואו להיות הראשונים לקרוא את 2%</h2>
           <p className="mx-auto mt-6 max-w-xl text-cream/60">הספר נמצא בדרך. קישור לרכישה מוקדמת יתווסף כאן בהמשך.</p>
-          <span className="mt-9 inline-block border border-gold/65 px-7 py-3.5 text-sm text-gold" aria-disabled="true">רכישה מוקדמת — בקרוב</span>
+          <span className="mt-9 inline-block border border-gold/65 px-7 py-3.5 text-sm text-gold" aria-disabled="true">רכישה מוקדמת, בקרוב</span>
         </Reveal>
       </section>
     </>

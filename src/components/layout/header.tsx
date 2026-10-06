@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-plum/12 bg-paper/90 backdrop-blur-lg">
       <div className="mx-auto flex min-h-20 w-full max-w-7xl flex-col justify-center gap-4 overflow-hidden px-5 py-4 md:flex-row md:items-center md:justify-between md:px-10">
-        <Link href="/" className="group flex w-fit max-w-full shrink-0 items-center gap-3 text-plum" aria-label={`${siteConfig.name} — דף הבית`}>
+        <Link href="/" className="group flex w-fit max-w-full shrink-0 items-center gap-3 text-plum" aria-label={`${siteConfig.name}, דף הבית`}>
           <span className="relative block size-10" aria-hidden="true">
             <span className="absolute right-0 top-0 font-serif text-[1.65rem] leading-none text-plum transition-transform duration-500 group-hover:-translate-y-0.5">ש</span>
             <span className="absolute bottom-0 left-0 font-serif text-[1.65rem] leading-none text-orange transition-transform duration-500 group-hover:translate-y-0.5">ק</span>

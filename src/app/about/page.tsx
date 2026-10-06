@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import shirkanPortrait from "../../../pic/shirkan-author-v2.jpeg";
 import { Reveal } from "@/components/ui/reveal";
+import { ExternalLinkIcon } from "@/components/ui/social-links";
+import { storyClub } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "אודות",
@@ -86,6 +88,28 @@ export default function AboutPage() {
             <p className="border-r-2 border-gold pr-6 font-serif text-3xl leading-snug text-navy">לפעמים היצירה עצמה היא זו שמכינה אותנו.</p>
           </Reveal>
         </div>
+      </section>
+
+      <section className="border-t border-gold/25 bg-paper py-16 md:py-20">
+        <Reveal className="mx-auto grid max-w-5xl gap-8 px-5 md:grid-cols-[0.65fr_1.35fr] md:items-start md:px-10">
+          <div>
+            <p className="text-sm tracking-[0.16em] text-orange">פרויקטים נוספים</p>
+            <div className="mt-5 h-px w-20 bg-gold" aria-hidden="true" />
+          </div>
+          <div>
+            <h2 className="font-serif text-4xl font-semibold text-plum">{storyClub.name}</h2>
+            <p className="mt-4 max-w-xl text-lg leading-8 text-ink/70">{storyClub.description}</p>
+            <a
+              href={storyClub.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-7 inline-flex items-center gap-2 border-b border-orange pb-1 text-sm text-plum transition-colors hover:text-orange"
+            >
+              לביקור ב-StoryClub
+              <span className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"><ExternalLinkIcon /></span>
+            </a>
+          </div>
+        </Reveal>
       </section>
 
       <section className="bg-navy py-20 text-cream md:py-24">

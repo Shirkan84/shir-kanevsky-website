@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/reveal";
-import { siteConfig } from "@/config/site";
+import { ExternalLinkIcon, SocialLinks } from "@/components/ui/social-links";
+import { siteConfig, storyClub } from "@/config/site";
 
 export const metadata: Metadata = { title: "יצירת קשר" };
 
@@ -19,6 +20,19 @@ export default function ContactPage() {
             {siteConfig.email}
             <span className="transition-transform group-hover:-translate-x-1" aria-hidden="true">←</span>
           </Link>
+          <div className="mt-12 border-t border-cream/15 pt-8">
+            <p className="text-sm tracking-[0.1em] text-cream/60">אפשר למצוא אותי גם כאן</p>
+            <SocialLinks className="mt-5" linkClassName="text-cream/65 hover:border-orange/60 hover:text-orange" />
+            <a
+              href={storyClub.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-8 inline-flex items-center gap-2 text-sm text-gold transition-colors hover:text-orange"
+            >
+              לביקור ב-StoryClub
+              <span className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"><ExternalLinkIcon /></span>
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>

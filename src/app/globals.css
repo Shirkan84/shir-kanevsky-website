@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: #f5f0e7;
+  --color-sand: #ebe2d3;
+  --color-ink: #1f211d;
+  --color-rust: #9a4935;
+  --font-sans: Arial, "Noto Sans Hebrew", sans-serif;
+  --font-serif: Georgia, "Noto Serif Hebrew", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-rust) 22%, transparent);
+}

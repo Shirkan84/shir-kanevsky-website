@@ -17,7 +17,7 @@ const serif = Frank_Ruhl_Libre({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://shir-kanevsky-website.vercel.app";
+const siteUrl = "https://shir-kanevsky-website.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "he_IL",
-    url: siteUrl,
+    url: `${siteUrl}/`,
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: "סופרת, יוצרת ומרצה. הספר 2%, הרצאות וליווי כתיבה.",
     images: [
       {
-        url: "/images/Brand.png",
-        width: 1732,
-        height: 909,
-        alt: "שיר קנבסקי - סופרת, יוצרת ומרצה",
+        url: "/images/brand-social-v2.png",
+        width: 1200,
+        height: 630,
+        alt: "שיר קנבסקי",
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: "סופרת, יוצרת ומרצה. הספר 2%, הרצאות וליווי כתיבה.",
-    images: ["/images/Brand.png"],
+    images: ["/images/brand-social-v2.png"],
   },
   robots: {
     index: true,

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import shirkanPortrait from "../../../pic/Shirkan.jpeg";
+import shirkanPortrait from "../../../pic/shirkan-author-v2.jpeg";
 import { Reveal } from "@/components/ui/reveal";
 
 export const metadata: Metadata = {

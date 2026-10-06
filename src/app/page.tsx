@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import backCover from "../../pic/back.jpeg";
 import frontCover from "../../pic/front.jpeg";
-import shirkanPortrait from "../../pic/Shirkan.jpeg";
+import shirkanPortrait from "../../pic/shirkan-author-v2.jpeg";
 import { Reveal } from "@/components/ui/reveal";
 import { siteConfig } from "@/config/site";
 
@@ -43,7 +43,7 @@ export default function Home() {
           <Reveal delay={120} className="group relative z-10 mx-auto h-[35rem] w-full max-w-xl sm:h-[43rem] lg:-left-10 lg:h-[46rem]">
             <div className="absolute inset-y-8 left-0 w-[88%] bg-plum" aria-hidden="true" />
             <div className="absolute bottom-0 right-0 h-[92%] w-[82%] overflow-hidden shadow-[0_35px_75px_rgba(53,45,47,0.25)]">
-              <Image src={shirkanPortrait} alt="שיר קנבסקי" fill priority sizes="(max-width: 1024px) 82vw, 36vw" className="image-zoom object-cover object-[center_22%]" />
+              <Image src={shirkanPortrait} alt="שיר קנבסקי" fill priority sizes="(max-width: 1024px) 82vw, 36vw" className="image-zoom object-cover object-top" />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-plum/45 to-transparent" aria-hidden="true" />
             </div>
             <div className="book-float absolute bottom-6 left-0 w-[34%] sm:w-[30%] lg:-left-4 lg:w-[34%]">

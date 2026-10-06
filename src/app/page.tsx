@@ -18,7 +18,7 @@ export default function Home() {
           <Reveal>
             <p className="mb-7 flex items-center gap-3 text-base font-semibold tracking-[0.1em] text-orange before:h-px before:w-10 before:bg-gold sm:text-lg">יוצרת * כותבת * מרצה</p>
             <h1 className="max-w-4xl text-5xl leading-[1.08] font-semibold tracking-[-0.03em] text-plum sm:text-6xl lg:text-[5.25rem]">
-              <span className="block">אל תחכו להיות מוכנים.</span>
+              <span className="block">אל תחכו לרגע שבו תרגישו מוכנים.</span>
               <span className="block">צרו אותו תוך כדי תנועה</span>
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-8 text-ink/68">

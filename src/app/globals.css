@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-paper: #faf6ed;
-  --color-paper-deep: #f2eadc;
-  --color-sand: #e9dfcf;
-  --color-ink: #3d342f;
-  --color-plum: #4e3048;
-  --color-lavender: #8c7488;
-  --color-gold: #b18e4f;
-  --color-orange: #c45f32;
-  --color-rust: #c45f32;
+  --color-paper: #f7f0e4;
+  --color-paper-deep: #e9ddcc;
+  --color-sand: #d9c9b5;
+  --color-cream: #fff8eb;
+  --color-ink: #352d2f;
+  --color-navy: #4a253d;
+  --color-midnight: #281923;
+  --color-dusk: #674356;
+  --color-plum: #4a253d;
+  --color-lavender: #8c7482;
+  --color-gold: #bd9655;
+  --color-orange: #cf5b2e;
+  --color-copper: #a74628;
+  --color-rust: #cf5b2e;
   --font-sans: var(--font-heebo), Arial, sans-serif;
   --font-serif: var(--font-frank-ruhl), Georgia, serif;
 }
@@ -19,6 +24,8 @@
 }
 
 html {
+  max-width: 100%;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
@@ -26,6 +33,8 @@ body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  max-width: 100%;
+  overflow-x: clip;
   text-rendering: optimizeLegibility;
 }
 
@@ -36,7 +45,45 @@ h3 {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-gold) 32%, transparent);
+  background: color-mix(in srgb, var(--color-orange) 32%, transparent);
+}
+
+.dark-chapter {
+  background-color: var(--color-midnight);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgb(103 67 86 / 40%), transparent 30rem),
+    radial-gradient(circle at 88% 82%, rgb(207 91 46 / 16%), transparent 27rem);
+}
+
+.fine-grid {
+  background-image:
+    linear-gradient(rgb(195 154 85 / 8%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(195 154 85 / 8%) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+
+.book-float {
+  animation: book-float 7s ease-in-out infinite;
+  filter: drop-shadow(0 28px 34px rgb(30 14 24 / 44%));
+}
+
+.image-zoom {
+  transition: transform 900ms cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+.group:hover .image-zoom {
+  transform: scale(1.025);
+}
+
+@keyframes book-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(-1deg);
+  }
 }
 
 .reveal {
@@ -60,5 +107,9 @@ h3 {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .book-float {
+    animation: none;
   }
 }
